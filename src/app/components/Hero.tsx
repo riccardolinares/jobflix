@@ -1,14 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 import Subscribe from "@/components/Subscribe";
+import HorizontalScrollCarousel from "@/components/HorizontalScrollCarousel";
 
 export default function Hero() {
   return (
-    <div className="w-full relative isolate overflow-hidden pt-14 bg-gray">
+    <div className="w-full h-screen relative isolate overflow-hidden pt-14 bg-gray">
       <img
         src="/img/bg-hero.svg"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
 
+      <div className="w-full flex items-center justify-center">
+        <HorizontalScrollCarousel />
+      </div>
       <div className="mx-auto max-w-2xl">
         {/* py-32 sm:py-48 lg:py-56 */}
         <div className="text-center">

@@ -12,7 +12,7 @@ export default function Button({
     <button
       type={type}
       className={classNames(
-        "rounded-full bg-blue px-10 py-2 text-sm font-semibold text-white shadow-sm hover:bg-medium-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+        "rounded-full bg-blue px-10 py-3 text-base font-semibold text-white shadow-sm hover:bg-medium-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
       )}
     >
       {children}
