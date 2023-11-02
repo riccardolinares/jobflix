@@ -11,7 +11,10 @@
     "prisma": "npx prisma db push"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@prisma/client": "^5.5.2",
+    "classnames": "^2.3.2",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18"
