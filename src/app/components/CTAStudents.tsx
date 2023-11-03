@@ -10,7 +10,13 @@ export default function CTA() {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <span className="flex flex-row items-center gap-x-4 text-xl">
-              <AcademicCapIcon className="h-10 w-10 text-blue" />
+              <Image
+                src="/img/ico-student.svg"
+                alt=""
+                className="h-16 w-16"
+                width={100}
+                height={100}
+              />
               Per gli studenti
             </span>
           </div>
@@ -36,14 +42,14 @@ export default function CTA() {
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <Image
             src="/img/cta-student.svg"
-            alt="App screenshot"
+            alt=""
             width={500}
             height={200}
             className="group-hover:hidden"
           />
           <Image
             src="/img/cta-student-hover.svg"
-            alt="App screenshot"
+            alt=""
             width={500}
             height={200}
             className="group-hover:block hidden"

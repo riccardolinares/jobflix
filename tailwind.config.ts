@@ -14,12 +14,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        yellow: "#FFBA00",
-        black: "#03121C",
-        gray: "#F2F2F2",
-        blue: "#0D5991",
-        "light-blue": "#6BA8D6",
-        "medium-blue": "#0F8CD9",
+        yellow: { DEFAULT: "#FFBA00" },
+        black: { DEFAULT: "#03121C" },
+        gray: { DEFAULT: "#F2F2F2" },
+        blue: {
+          DEFAULT: "#0D5991",
+          light: "#6BA8D6",
+          medium: "#0F8CD9",
+        },
       },
       fontFamily: {
         lato: "var(--font-lato)",

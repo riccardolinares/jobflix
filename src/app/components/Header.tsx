@@ -24,7 +24,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Jobflix</span>
-            <Logo className="h-10 w-auto" />
+            <Logo className="h-16 w-auto" />
           </Link>
         </div>
         {/* <div className="hidden lg:flex lg:gap-x-12">
@@ -39,10 +39,7 @@ export default function Example() {
           ))}
         </div> */}
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          <a
-            href="#"
-            className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900 uppercase"
-          >
+          <a href="#" className="text-blue hidden lg:block uppercase">
             Registrati
           </a>
           <a href="#">
