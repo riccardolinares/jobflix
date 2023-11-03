@@ -7,7 +7,7 @@ export default function CTA() {
     <div className="bg-white w-full h-5/6 items-center flex py-6">
       <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:py-8">
-          <h1 className="text-blue text-3xl font-extrabold uppercase tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-blue text-3xl font-extrabold uppercase tracking-tight sm:text-5xl">
             Il lavoro cambia. <br />I ragazzi cambiano. <br />
             Jobflix è la soluzione per l&apos;orientamento che si adatta al loro
             cambiamento.
