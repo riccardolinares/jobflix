@@ -1,4 +1,4 @@
-import { EmailConfig } from "next-auth/providers";
+import { EmailConfig } from "next-auth/providers/email";
 import { createTransport } from "nodemailer";
 
 export async function CustomsendVerificationRequest(params: {
