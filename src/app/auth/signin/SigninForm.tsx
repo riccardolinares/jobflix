@@ -74,7 +74,7 @@ export default function SigninForm() {
             </label>
             <input
               type="email"
-              className="w-full px-3 py-3 text-base text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50 focus:ring-primary focus:border-primary"
+              className="w-full px-3 py-3 text-base text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue focus:border-blue"
               placeholder="Il tuo indirizzo email"
               name="email"
               id="email"
@@ -87,7 +87,7 @@ export default function SigninForm() {
 
           <button
             type="submit"
-            className="w-full px-6 py-3 mt-4 text-base font-medium text-white bg-accent border border-transparent rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            className="w-full px-6 py-3 mt-4 text-base font-medium text-white bg-blue border border-transparent rounded-md hover:bg-blue/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue"
           >
             Accedi
           </button>

@@ -4,12 +4,10 @@ import classNames from "classnames";
 
 export default function HorizontalScrollCarousel() {
   const images = [
-    "/img/Rettangolo 24.jpg",
-    "/img/Rettangolo 25.jpg",
-    "/img/Rettangolo 26.jpg",
-    "/img/Rettangolo 27.jpg",
-    "/img/Rettangolo 28.jpg",
-    "/img/Rettangolo 29.jpg",
+    "/img/job1.jpg",
+    "/img/job2.jpg",
+    "/img/job3.jpg",
+    "/img/job4.jpg",
   ];
 
   return (
@@ -21,7 +19,7 @@ export default function HorizontalScrollCarousel() {
             className={classNames(
               index == 0 ? "-ml-12" : "",
               index == images.length - 1 ? "-mr-12" : "",
-              "w-1/6"
+              "w-full"
             )}
           >
             <Card>

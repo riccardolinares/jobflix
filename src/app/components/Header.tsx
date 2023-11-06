@@ -42,7 +42,7 @@ export default function Example() {
           <a href="#" className="text-blue hidden lg:block uppercase">
             Registrati
           </a>
-          <a href="#">
+          <a href="/auth/signin">
             <Button>Accedi</Button>
           </a>
         </div>

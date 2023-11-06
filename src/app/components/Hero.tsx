@@ -11,10 +11,10 @@ export default function Hero() {
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
 
-      <div className="w-full flex items-center justify-center mt-2 mb-10">
+      <div className="w-full flex items-center justify-center mt-2">
         <HorizontalScrollCarousel />
       </div>
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-2xl mt-16">
         {/* py-32 sm:py-48 lg:py-56 */}
         <div className="text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-5xl uppercase">
