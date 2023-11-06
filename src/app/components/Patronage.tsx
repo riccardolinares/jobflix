@@ -69,7 +69,7 @@ export default function Patronage() {
     <div className="bg-gray py-24 sm:py-32 w-full">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-4xl font-extrabold leading-8 text-blue">
-          Con il patrocinio di
+          Con il supporto di
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
           {patronages

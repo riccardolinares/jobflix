@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 export default function CTA() {
   return (
-    <div className="bg-gray w-full h-screen items-center flex">
+    <div className="bg-gray w-full min-h-screen items-center flex">
       <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">

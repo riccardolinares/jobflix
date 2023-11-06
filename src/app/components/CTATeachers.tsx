@@ -4,7 +4,7 @@ import Button from "./ui/Button";
 
 export default function CTA() {
   return (
-    <div className="bg-gray w-full h-screen">
+    <div className="bg-gray w-full min-h-screen">
       <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mr-10 lg:ml-0 lg:mt-0 lg:max-w-none lg:flex-none xl:mr-32">
           <Image

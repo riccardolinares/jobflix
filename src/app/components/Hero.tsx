@@ -4,7 +4,7 @@ import HorizontalScrollCarousel from "@/components/HorizontalScrollCarousel";
 
 export default function Hero() {
   return (
-    <div className="w-full h-screen relative isolate overflow-hidden pt-14 bg-gray">
+    <div className="w-full min-h-screen relative isolate overflow-hidden pt-14 bg-gray">
       <img
         src="/img/bg-hero.svg"
         alt=""
@@ -18,7 +18,9 @@ export default function Hero() {
         {/* py-32 sm:py-48 lg:py-56 */}
         <div className="text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-5xl uppercase">
-            Diventa <span className="text-blue-medium">l&apos;ingegnere</span>{" "}
+            {/* TODO: igegnere che viene scritto, come se fosse digitato */}
+            Diventa
+            <span className="text-blue-medium"> l&apos;ingegnere</span> <br />
             che c&apos;è in te
           </h1>
           <p className="mt-6 sm:text-xl text-lg font-normal leading-8  text-blue">
