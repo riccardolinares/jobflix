@@ -5,26 +5,26 @@ import Button from "./ui/Button";
 import Logo from "./ui/Logo";
 import Link from "next/link";
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+// const navigation = [
+//   { name: "Product", href: "#" },
+//   { name: "Features", href: "#" },
+//   { name: "Marketplace", href: "#" },
+//   { name: "Company", href: "#" },
+// ];
 
-export default function Example() {
+export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray py-3">
+    <header className="bg-gray px-6 py-6">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+          <Link href="/">
             <span className="sr-only">Jobflix</span>
-            <Logo className="h-16 w-auto" />
+            <Logo className="h-12 w-auto" />
           </Link>
         </div>
         {/* <div className="hidden lg:flex lg:gap-x-12">
@@ -39,14 +39,17 @@ export default function Example() {
           ))}
         </div> */}
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          <a href="#" className="text-blue hidden lg:block uppercase">
+          <a
+            href="#"
+            className="text-blue uppercase hover:underline hover:underline-offset-4"
+          >
             Registrati
           </a>
           <a href="/auth/signin">
             <Button>Accedi</Button>
           </a>
         </div>
-        <div className="flex lg:hidden">
+        {/* <div className="flex lg:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -55,9 +58,9 @@ export default function Example() {
             <span className="sr-only">Apri menu principale</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-        </div>
+        </div> */}
       </nav>
-      <Dialog
+      {/* <Dialog
         as="div"
         className="lg:hidden"
         open={mobileMenuOpen}
@@ -65,13 +68,10 @@ export default function Example() {
       >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center gap-x-6">
+          <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Jobflix</span>
-              <Logo className="h-10 w-auto" />
-            </a>
-            <a href="#" className="ml-auto">
-              <Button>Registrati</Button>
+              <Logo className="h-12 w-auto" />
             </a>
             <button
               type="button"
@@ -100,13 +100,13 @@ export default function Example() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  <Button>Accedi</Button>
                 </a>
               </div>
             </div>
           </div>
         </Dialog.Panel>
-      </Dialog>
+      </Dialog> */}
     </header>
   );
 }

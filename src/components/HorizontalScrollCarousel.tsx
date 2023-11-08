@@ -8,18 +8,18 @@ export default function HorizontalScrollCarousel() {
     "/img/job2.jpg",
     "/img/job3.jpg",
     "/img/job4.jpg",
+    "/img/job1.jpg",
   ];
 
   return (
-    <div className="flex flex-row gap-x-4">
+    <div className="flex flex-row gap-x-4 items-center justify-center ">
       {images.map((image, index) => {
         return (
           <div
             key={`person-${index}`}
             className={classNames(
               index == 0 ? "-ml-12" : "",
-              index == images.length - 1 ? "-mr-12" : "",
-              "w-full"
+              index == images.length - 1 ? "-mr-12" : ""
             )}
           >
             <Card>

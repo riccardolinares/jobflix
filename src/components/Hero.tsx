@@ -6,16 +6,15 @@ export default function Hero() {
   return (
     <div className="w-full min-h-screen relative isolate overflow-hidden pt-14 bg-gray">
       <img
-        src="/img/bg-hero.svg"
+        src="/img/backgrounds/bg-1.svg"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
 
-      <div className="w-full flex items-center justify-center mt-2">
+      <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto">
         <HorizontalScrollCarousel />
       </div>
-      <div className="mx-auto max-w-2xl mt-16">
-        {/* py-32 sm:py-48 lg:py-56 */}
+      <div className="mx-auto max-w-2xl mt-16 px-6">
         <div className="text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-5xl uppercase">
             {/* TODO: igegnere che viene scritto, come se fosse digitato */}
