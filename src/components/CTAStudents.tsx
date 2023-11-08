@@ -13,8 +13,8 @@ import Button from "./ui/Button";
 //   <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto">
 export default function CTA() {
   return (
-    <div className="w-full min-h-screen items-center flex">
-      <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8 ">
+    <div className="w-full min-h-screen items-center flex py-16">
+      <div className="group mx-auto max-w-7xl px-6 flex lg:flex-row flex-col-reverse lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <span className="flex flex-row items-center gap-x-4 text-xl">
