@@ -1,20 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/Button";
 
 export default function CTA() {
   return (
-    //  <div className="w-full min-h-screen relative isolate overflow-hidden pt-14 bg-gray">
-    //   <img
-    //     src="/img/backgrounds/bg-1.svg"
-    //     alt=""
-    //     className="absolute inset-0 -z-10 h-full w-full object-cover"
-    //   />
-
-    //   <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto">
     <div className="bg-white w-full h-5/6 items-center flex  py-16 relative isolate overflow-hidde">
       <img
-        src="/img/backgrounds/bg-3.svg"
+        src="/img/backgrounds/bg-4.svg"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />

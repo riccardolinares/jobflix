@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Subscribe from "@/components/Subscribe";
 import HorizontalScrollCarousel from "@/components/HorizontalScrollCarousel";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
@@ -14,14 +15,33 @@ export default function Hero() {
       <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto">
         <HorizontalScrollCarousel />
       </div>
-      <div className="mx-auto max-w-2xl mt-16 px-6">
-        <div className="text-center">
-          <h1 className="text-3xl font-extrabold tracking-tight text-black sm:text-5xl uppercase">
-            {/* TODO: igegnere che viene scritto, come se fosse digitato */}
-            Diventa
-            <span className="text-blue-medium"> l&apos;ingegnere</span> <br />
-            che c&apos;è in te
-          </h1>
+      <div className="mx-auto  mt-16 px-6 text-center">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-black uppercase">
+          {/* TODO: igegnere che viene scritto, come se fosse digitato */}
+          Diventa{" "}
+          <span className="text-blue-medium">
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "l'ingegnere",
+                1500, // wait 1s before replacing "Mice" with "Hamsters"
+                "il videomaker",
+                1500,
+                "il programmatore",
+                1500,
+                "il cuoco",
+                1500,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "inherit", display: "inline-block" }}
+              repeat={Infinity}
+            />
+          </span>{" "}
+          <br />
+          che c&apos;è in te
+        </h1>
+        <div className="max-w-2xl items-center mx-auto">
           <p className="mt-6 sm:text-xl text-lg font-normal leading-8  text-blue">
             Jobflix è la bussola per orientarti al lavoro: scopri i mestieri,
             valuta le tue attitudini e pianifica il percorso di studi che ti

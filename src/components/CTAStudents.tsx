@@ -1,16 +1,7 @@
-import { AcademicCapIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./ui/Button";
 
-// <div className="w-full min-h-screen relative isolate overflow-hidden pt-14 bg-gray">
-//   <img
-//     src="/img/backgrounds/bg-1.svg"
-//     alt=""
-//     className="absolute inset-0 -z-10 h-full w-full object-cover"
-//   />
-
-//   <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto">
 export default function CTA() {
   return (
     <div className="w-full min-h-screen items-center flex py-16">
@@ -49,17 +40,17 @@ export default function CTA() {
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <Image
-            src="/img/cta-student.png"
+            src="/img/cta-student.webp"
             alt=""
-            width={500}
-            height={200}
+            width={800}
+            height={800}
             className="group-hover:hidden"
           />
           <Image
-            src="/img/cta-student-hover.png"
+            src="/img/cta-student-hover.webp"
             alt=""
-            width={500}
-            height={200}
+            width={800}
+            height={800}
             className="group-hover:block hidden"
           />
         </div>

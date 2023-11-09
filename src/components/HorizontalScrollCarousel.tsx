@@ -4,11 +4,11 @@ import classNames from "classnames";
 
 export default function HorizontalScrollCarousel() {
   const images = [
-    "/img/job1.jpg",
-    "/img/job2.jpg",
-    "/img/job3.jpg",
-    "/img/job4.jpg",
-    "/img/job1.jpg",
+    "/img/jobs/job-1.webp",
+    "/img/jobs/job-2.webp",
+    "/img/jobs/job-3.webp",
+    "/img/jobs/job-4.webp",
+    "/img/jobs/job-5.webp",
   ];
 
   return (
