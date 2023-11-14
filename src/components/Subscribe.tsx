@@ -1,5 +1,6 @@
 import Button from "./ui/Button";
 import Image from "next/image";
+import { Input } from "./ui/Input";
 
 export default function Subscribe() {
   return (
@@ -14,7 +15,7 @@ export default function Subscribe() {
         <label htmlFor="email-address" className="sr-only">
           Indirizzo email
         </label>
-        <input
+        <Input
           id="email-address"
           name="email"
           type="email"

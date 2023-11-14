@@ -22,9 +22,7 @@ export default function HorizontalScrollCarousel() {
               index == images.length - 1 ? "-mr-12" : ""
             )}
           >
-            <Card>
-              <img src={image} alt="" className="object-cover w-full h-full" />
-            </Card>
+            <Card image={image}></Card>
           </div>
         );
       })}

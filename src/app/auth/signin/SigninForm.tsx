@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
+import { Input } from "@/components/ui/Input";
 
 function GoogleIcon() {
   return (
@@ -72,7 +73,7 @@ export default function SigninForm() {
             <label htmlFor="email" className="sr-only">
               Indirizzo email
             </label>
-            <input
+            <Input
               type="email"
               className="w-full px-3 py-3 text-base text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue focus:border-blue"
               placeholder="Il tuo indirizzo email"
@@ -81,7 +82,7 @@ export default function SigninForm() {
               required
               aria-label="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e: any) => setEmail(e.target.value)}
             />
           </div>
 
