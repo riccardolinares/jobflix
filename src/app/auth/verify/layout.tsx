@@ -11,7 +11,7 @@ export default async function SigninLayout({
 }) {
   const session = await getServerSession(authOptions);
   if (session) {
-    redirect("/documents");
+    redirect("/dashboard");
   }
   return (
     <div className="h-full bg-gray-200">

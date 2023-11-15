@@ -64,7 +64,7 @@ export default function SigninForm() {
           e.preventDefault();
           signIn("email", {
             email: email,
-            callbackUrl: searchParams.get("callbackUrl") || "/documents",
+            callbackUrl: searchParams.get("callbackUrl") || "/dashboard",
           });
         }}
       >
@@ -107,7 +107,7 @@ export default function SigninForm() {
         className="w-full px-6 py-3 mt-4 justify-center flex items-center text-base font-medium bg-white border border-gray-300 rounded-md shadow-md text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         onClick={() =>
           signIn("google", {
-            callbackUrl: searchParams.get("callbackUrl") || "/documents",
+            callbackUrl: searchParams.get("callbackUrl") || "/dashboard",
           })
         }
       >

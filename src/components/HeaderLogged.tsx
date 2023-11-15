@@ -8,7 +8,7 @@ import { Input } from "./ui/Input";
 
 export default function Header() {
   return (
-    <header className="bg-gray px-6 py-6">
+    <header className="bg-gray px-6 py-6 ">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6"
         aria-label="Global"

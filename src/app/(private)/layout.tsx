@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 import HeaderLogged from "@/components/HeaderLogged";
+import Footer from "@/components/Footer";
 
 export default async function Layout({
   children,
@@ -16,7 +17,8 @@ export default async function Layout({
   return (
     <>
       <HeaderLogged />
-      {children}
+      <main className="min-h-screen">{children}</main>
+      <Footer />
     </>
   );
 }

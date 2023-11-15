@@ -55,3 +55,43 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Video {
+  id          String     @id @default(cuid())
+  slug        String
+  title       String
+  description String
+  url         String
+  published   Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  sponsors    Sponsor[]
+  categories  Category[]
+  speakers    Speaker[]
+}
+
+model Category {
+  id     String  @id @default(cuid())
+  slug   String
+  name   String
+  videos Video[]
+}
+
+model Sponsor {
+  id      String  @id @default(cuid())
+  name    String
+  logo    String?
+  website String?
+  videos  Video[]
+}
+
+model Speaker {
+  id       String  @id @default(cuid())
+  name     String
+  jobTitle String?
+  avatar   String?
+  bio      String?
+  twitter  String?
+  website  String?
+  videos   Video[]
+}
