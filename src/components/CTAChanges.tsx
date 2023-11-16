@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 export default function CTA() {
   return (
-    <div className="bg-white w-full h-5/6 items-center flex  py-16 relative isolate overflow-hidde">
+    <div className="bg-white w-full h-5/6 items-center flex  py-16 relative isolate overflow-hidden">
       <img
         src="/img/backgrounds/bg-4.svg"
         alt=""
@@ -30,7 +30,7 @@ export default function CTA() {
             </Link>
           </div>
         </div>
-        <div className="mx-auto my-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div className="overflow-hidden mx-auto my-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <Image
             src="/img/cta-changes.webp"
             alt=""

@@ -48,7 +48,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
   return (
     <>
       <div className="bg-gray">
-        <div className="w-full bg-[#000]">
+        <div className="w-full">
           <div className="relative isolate overflow-hidden">
             <video
               width="100%"
@@ -65,30 +65,41 @@ export default async function VideoPage({ params }: VideoPageProps) {
               Your browser does not support the video tag.
             </video>
 
-            <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-gray via-transparent to-transparent"></div>
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-gray  to-transparent"></div>
 
-            <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56 xl:py-64 2xl:py-80 relative">
-              <div className="absolute bottom-0 left-0 m-4 p-4 flex space-x-2">
-                <Link href={`/video/${params.id}/watch`}>
-                  <Button className="flex flex-row gap-x-2 items-center justify-center">
-                    <Play className="fill-white" /> Riproduci
-                  </Button>
-                </Link>
-                <div className="flex flex-row gap-x-6 pl-8 items-center justify-center text-blue">
-                  <Link href="#trailer">
-                    <button className="group flex flex-col justify-center items-center hover:text-blue-light">
-                      <Video className="group-hover:fill-blue-light" />
-                      <span className="text-sm">Trailer</span>
-                    </button>
+            <div className="mx-auto max-w-7xl py-48 sm:py-56 lg:py-64 xl:py-72 2xl:py-80 relative">
+              <div className="absolute bottom-0 left-0 px-8 py-2 flex flex-col gap-x-2 ">
+                <div className="flex flex-col mb-6 items-start gap-x-4 gap-y-4">
+                  <h1 className="text-4xl font-bold text-black ">
+                    {video.title}
+                  </h1>
+                  {/* <span className="max-h-6 bg-gray inline-flex items-center gap-x-1.5 rounded-md px-2  font-medium text-blue text-base ">
+                    Top 5
+                  </span> */}
+                </div>
+
+                <div className="flex flex-row gap-x-2">
+                  <Link href={`/video/${params.id}/watch`}>
+                    <Button className="flex flex-row gap-x-2 items-center justify-center">
+                      <Play className="fill-white" /> Riproduci
+                    </Button>
                   </Link>
-                  <button className="group flex flex-col justify-center items-center hover:text-blue-light">
-                    <Heart className="group-hover:fill-blue-light" />
-                    <span className="text-sm">Like</span>
-                  </button>
-                  <button className="group flex flex-col justify-center items-center hover:text-blue-light">
-                    <Share2 className="group-hover:fill-blue-light" />
-                    <span className="text-sm">Share</span>
-                  </button>
+                  <div className="flex flex-row gap-x-6 pl-8 items-center justify-center text-blue">
+                    <Link href="#trailer">
+                      <button className="group flex flex-col justify-center items-center hover:text-blue-light">
+                        <Video className="group-hover:fill-blue-light" />
+                        <span className="text-sm">Trailer</span>
+                      </button>
+                    </Link>
+                    <button className="group flex flex-col justify-center items-center hover:text-blue-light">
+                      <Heart className="group-hover:fill-blue-light" />
+                      <span className="text-sm">Like</span>
+                    </button>
+                    <button className="group flex flex-col justify-center items-center hover:text-blue-light">
+                      <Share2 className="group-hover:fill-blue-light" />
+                      <span className="text-sm">Share</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -98,7 +109,21 @@ export default async function VideoPage({ params }: VideoPageProps) {
           <div className="flex flex-col md:flex-row gap-x-24 gap-y-8 items-start justify-center ">
             <div className="w-full md:w-2/3">
               <p className="text-lg font-normal">{video.description}</p>
-              <Speakers speakers={video.speakers} />
+              <Speakers speakers={video.speakers} className="mt-8 w-full" />
+              <div className="flex flex-row gap-x-2 mt-20">
+                <button
+                  type="button"
+                  className="rounded-full bg-transparent border-blue border px-10 py-2 text-base font-semibold text-blue shadow-sm hover:bg-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+                >
+                  Scarica Lesson Plan
+                </button>
+                <button
+                  type="button"
+                  className="rounded-full bg-transparent border-blue border px-10 py-2 text-base font-semibold text-blue shadow-sm hover:bg-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+                >
+                  Documento di Approfondimento
+                </button>
+              </div>
             </div>
             <div className="w-full md:w-1/3">
               <p className="text-lg">
@@ -133,11 +158,6 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col text-lg mt-6 items-start justify-start ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam voluptates, repellat, quod, voluptatum dolorum quae
-                quos voluptatem quibusdam doloremque magni expedita.
-              </div>
             </div>
           </div>
         </div>
@@ -145,16 +165,36 @@ export default async function VideoPage({ params }: VideoPageProps) {
           id="trailer"
           className="flex mx-auto max-w-7xl py-8 px-8 items-center justify-center"
         >
-          <div className="max-w-2xl items-center justify-center">
-            <video
-              width="100%"
-              height="100%"
-              controls
-              className="rounded-3xl shadow-lg"
-            >
-              <source src="/video/preview.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div className=" flex flex-row gap-x-5 items-center justify-center">
+            <div className="flex flex-col gap-y-2 w-full">
+              <h2 className="text-2xl text-blue font-bold text-center">
+                Trailer
+              </h2>
+              <video
+                width="100%"
+                height="100%"
+                controls
+                className="rounded-3xl shadow-lg w-full"
+              >
+                <source src="/video/preview.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>{" "}
+            <div className="flex flex-col gap-y-2 w-full">
+              <h2 className="text-2xl text-blue font-bold text-center">
+                La parola allo sponsor
+              </h2>
+
+              <video
+                width="100%"
+                height="100%"
+                controls
+                className="rounded-3xl shadow-lg"
+              >
+                <source src="/video/preview.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>

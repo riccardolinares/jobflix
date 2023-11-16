@@ -30,7 +30,7 @@ export default async function Page() {
             <SigninForm />
           </div>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
+          {/* <p className="mt-10 text-center text-sm text-gray-500">
             Non sei ancora registrato?{" "}
             <a
               href="#"
@@ -38,7 +38,7 @@ export default async function Page() {
             >
               Registrati qui
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

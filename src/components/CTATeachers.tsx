@@ -6,20 +6,20 @@ export default function CTA() {
   return (
     <div className="w-full min-h-screen py-16">
       <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mr-10 lg:ml-0 lg:mt-0 lg:max-w-none lg:flex-none xl:mr-32">
+        <div className="mx-auto mt-8 flex max-w-2xl sm:mt-24 lg:mr-10 lg:ml-0 lg:mt-0 lg:max-w-none lg:flex-none xl:mr-32">
           <Image
             src="/img/cta-teacher.webp"
             alt=""
             width={500}
-            height={200}
-            className="group-hover:hidden"
+            height={500}
+            className="group-hover:hidden object-contain"
           />
           <Image
             src="/img/cta-teacher-hover.webp"
             alt=""
             width={500}
-            height={200}
-            className="group-hover:block hidden"
+            height={500}
+            className="group-hover:block hidden object-contain"
           />
         </div>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">

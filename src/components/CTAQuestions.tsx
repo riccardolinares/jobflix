@@ -3,7 +3,7 @@ import Subscribe from "./Subscribe";
 
 export default function CTA() {
   return (
-    <div className="bg-gray w-full min-h-screen items-center flex py-6">
+    <div className="bg-gray w-full min-h-screen items-center flex py-6 overflow-hidden">
       <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:py-8">
           <div className="font-nunito text-center text-2xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">

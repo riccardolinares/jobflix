@@ -1,10 +1,8 @@
 "use client";
 
-import Button from "./ui/Button";
 import Logo from "./ui/Logo";
 import Link from "next/link";
 import { User2, Search } from "lucide-react";
-import { Input } from "./ui/Input";
 
 export default function Header() {
   return (

@@ -41,12 +41,12 @@ export default function Header() {
           ))}
         </div> */}
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          <a
+          {/* <a
             href="#"
             className="text-blue uppercase hover:underline hover:underline-offset-4"
           >
             Registrati
-          </a>
+          </a> */}
           <a href="/auth/signin">
             <Button>Accedi</Button>
           </a>
