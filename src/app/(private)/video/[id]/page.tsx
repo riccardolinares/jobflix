@@ -176,7 +176,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 controls
                 className="rounded-3xl shadow-lg w-full"
               >
-                <source src="/video/trailer.mp4" type="video/mp4" />
+                <source src={video.trailerVideoUrl || ""} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>{" "}
@@ -191,7 +191,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 controls
                 className="rounded-3xl shadow-lg"
               >
-                <source src="/video/sponsor.mp4" type="video/mp4" />
+                <source src={video.sponsorVideoUrl || ""} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

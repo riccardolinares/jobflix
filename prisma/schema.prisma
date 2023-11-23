@@ -57,17 +57,20 @@ model VerificationToken {
 }
 
 model Video {
-  id          String     @id @default(cuid())
-  slug        String
-  title       String
-  description String
-  url         String
-  published   Boolean    @default(false)
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
-  sponsors    Sponsor[]
-  categories  Category[]
-  speakers    Speaker[]
+  id              String     @id @default(cuid())
+  slug            String
+  title           String
+  description     String
+  videoUrl        String
+  headerVideoUrl  String?
+  trailerVideoUrl String?
+  sponsorVideoUrl String?
+  published       Boolean    @default(false)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  sponsors        Sponsor[]
+  categories      Category[]
+  speakers        Speaker[]
 }
 
 model Category {
