@@ -5,6 +5,12 @@ import BackgroundSection from "@/components/template/BackgroundSection";
 export default function Page() {
   const continueWatching = [
     {
+      image: "/img/jobs/job-5.webp",
+    },
+  ];
+
+  const other = [
+    {
       image: "/img/jobs/job-1.webp",
     },
     {
@@ -40,7 +46,7 @@ export default function Page() {
           <div>
             <h2 className="text-3xl text-blue font-bold">Novità</h2>
             <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {continueWatching.map((item, index) => (
+              {other.map((item, index) => (
                 <div key={`watch-${index}`}>
                   <VideoCard key={index} image={item.image}></VideoCard>
                 </div>
@@ -50,7 +56,7 @@ export default function Page() {
           <div>
             <h2 className="text-3xl text-blue font-bold">Più visti</h2>
             <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {continueWatching.map((item, index) => (
+              {other.map((item, index) => (
                 <div key={`watch-${index}`}>
                   <VideoCard key={index} image={item.image}></VideoCard>
                 </div>
@@ -60,7 +66,7 @@ export default function Page() {
           <div>
             <h2 className="text-3xl text-blue font-bold">Lavori creativi</h2>
             <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {continueWatching.map((item, index) => (
+              {other.map((item, index) => (
                 <div key={`watch-${index}`}>
                   <VideoCard key={index} image={item.image}></VideoCard>
                 </div>
