@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./ui/Button";
+import Button from "../ui/Button";
 
 export default function CTA() {
   return (

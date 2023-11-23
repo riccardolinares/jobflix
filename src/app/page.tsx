@@ -1,15 +1,15 @@
 "use client";
 
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import LogoCloud from "@/components/LogoCloud";
-import CTAStudents from "@/components/CTAStudents";
-import CTATeachers from "@/components/CTATeachers";
-import CTAChanges from "@/components/CTAChanges";
-import Patronage from "@/components/Patronage";
-import CTAQuestions from "@/components/CTAQuestions";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
+import Header from "@/components/template/Header";
+import Hero from "@/components/sections/Hero";
+import LogoCloud from "@/components/sections/LogoCloud";
+import CTAStudents from "@/components/sections/CTAStudents";
+import CTATeachers from "@/components/sections/CTATeachers";
+import CTAChanges from "@/components/sections/CTAChanges";
+import Patronage from "@/components/sections/Patronage";
+import CTAQuestions from "@/components/sections/CTAQuestions";
+import FAQ from "@/components/sections/FAQ";
+import Footer from "@/components/template/Footer";
 
 export default function Home() {
   return (

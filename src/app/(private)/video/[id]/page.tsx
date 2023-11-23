@@ -165,7 +165,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
           id="trailer"
           className="flex mx-auto max-w-7xl py-8 px-8 items-center justify-center"
         >
-          <div className=" flex flex-row gap-x-5 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-x-5 gap-y-8 items-center justify-center">
             <div className="flex flex-col gap-y-2 w-full">
               <h2 className="text-2xl text-blue font-bold text-center">
                 Trailer
@@ -176,7 +176,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 controls
                 className="rounded-3xl shadow-lg w-full"
               >
-                <source src="/video/preview.mp4" type="video/mp4" />
+                <source src="/video/trailer.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>{" "}
@@ -191,7 +191,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                 controls
                 className="rounded-3xl shadow-lg"
               >
-                <source src="/video/preview.mp4" type="video/mp4" />
+                <source src="/video/sponsor.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

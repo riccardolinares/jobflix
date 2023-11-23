@@ -1,6 +1,6 @@
-import Button from "./ui/Button";
+import Button from "./Button";
 import Image from "next/image";
-import { Input } from "./ui/Input";
+import { Input } from "./Input";
 
 export default function Subscribe() {
   return (

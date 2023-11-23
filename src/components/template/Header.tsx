@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Button from "./ui/Button";
-import Logo from "./ui/Logo";
+import Button from "../ui/Button";
+import Logo from "../ui/Logo";
 import Link from "next/link";
 
 // const navigation = [

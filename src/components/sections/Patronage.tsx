@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 interface PatronageProps {
-  id: number;
   alt: string;
   url: string;
 }
@@ -9,59 +8,32 @@ interface PatronageProps {
 export default function Patronage() {
   const patronages: PatronageProps[] = [
     {
-      id: 1,
-      alt: "Commissione Europea",
-      url: "/img/patronage/commissione-europea.jpg",
+      alt: "Campus Party",
+      url: "/img/patronage/1.png",
     },
     {
-      id: 2,
-      alt: "Ministero dell'Istruzione e del Merito",
-      url: "/img/patronage/ministero-istruzione.jpg",
+      alt: "Kulta",
+      url: "/img/patronage/2.png",
     },
     {
-      id: 3,
       alt: "Regione Lombardia",
-      url: "/img/patronage/regione-lombardia.jpg",
+      url: "/img/patronage/3.png",
     },
     {
-      id: 4,
       alt: "ASNOR",
-      url: "/img/patronage/asnor.jpg",
+      url: "/img/patronage/4.png",
     },
     {
-      id: 5,
       alt: "Comune di Roma",
-      url: "/img/patronage/roma.jpg",
+      url: "/img/patronage/5.png",
     },
     {
-      id: 6,
       alt: "Comune di Milano",
-      url: "/img/patronage/milano.jpg",
+      url: "/img/patronage/6.png",
     },
     {
-      id: 7,
       alt: "Camera Nazionale della Moda Italiana",
-      url: "/img/patronage/moda-italiana.jpg",
-    },
-    {
-      id: 8,
-      alt: "Confcommercio",
-      url: "/img/patronage/confcommercio.jpg",
-    },
-    {
-      id: 9,
-      alt: "Confartigianato",
-      url: "/img/patronage/confartigianato.jpg",
-    },
-    {
-      id: 10,
-      alt: "FLA",
-      url: "/img/patronage/fla.jpg",
-    },
-    {
-      id: 11,
-      alt: "CISL",
-      url: "/img/patronage/cisl.jpg",
+      url: "/img/patronage/7.png",
     },
   ];
 
@@ -81,8 +53,8 @@ export default function Patronage() {
                     className="max-h-28 w-full object-contain"
                     src={patronage.url}
                     alt={patronage.alt}
-                    width={158}
-                    height={48}
+                    width={800}
+                    height={250}
                   />
                 </div>
               );
@@ -96,8 +68,8 @@ export default function Patronage() {
                   className="max-h-20 w-full object-contain"
                   src={patronage.url}
                   alt={patronage.alt}
-                  width={158}
-                  height={48}
+                  width={800}
+                  height={250}
                 />
               </div>
             );

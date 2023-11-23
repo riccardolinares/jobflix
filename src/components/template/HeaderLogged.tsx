@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "./ui/Logo";
+import Logo from "../ui/Logo";
 import Link from "next/link";
 import { User2, Search } from "lucide-react";
 
@@ -12,7 +12,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="/">
+          <Link href="/dashboard">
             <span className="sr-only">Jobflix</span>
             <Logo className="h-12 w-auto" />
           </Link>
@@ -28,9 +28,12 @@ export default function Header() {
             <Search className="w-5 h-5 text-blue" />
           </div>
         </div>
-        <div className="flex flex-1 items-center justify-end gap-x-6">
+        <Link
+          href="/account"
+          className="flex flex-1 items-center justify-end gap-x-6"
+        >
           <User2 className="w-10 h-10 text-blue" />
-        </div>
+        </Link>
       </nav>
     </header>
   );

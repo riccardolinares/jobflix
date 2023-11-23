@@ -1,8 +1,8 @@
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
-import HeaderLogged from "@/components/HeaderLogged";
-import Footer from "@/components/Footer";
+import HeaderLogged from "@/components/template/HeaderLogged";
+import Footer from "@/components/template/Footer";
 
 export default async function Layout({
   children,
@@ -15,10 +15,10 @@ export default async function Layout({
     redirect("/auth/signin");
   }
   return (
-    <>
+    <div className="bg-gray min-h-screen flex flex-col">
       <HeaderLogged />
-      <main className="min-h-screen">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

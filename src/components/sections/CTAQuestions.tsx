@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Subscribe from "./Subscribe";
+import Subscribe from "../ui/Subscribe";
 
 export default function CTA() {
   return (

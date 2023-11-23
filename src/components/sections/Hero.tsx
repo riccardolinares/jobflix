@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import Subscribe from "@/components/Subscribe";
-import HorizontalScrollCarousel from "@/components/HorizontalScrollCarousel";
+import Subscribe from "@/components/ui/Subscribe";
+import HorizontalScrollCarousel from "@/components/ui/HorizontalScrollCarousel";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
