@@ -1,10 +1,12 @@
 import Container from "@/components/template/Container";
 import VideoCard from "../../../components/ui/VideoCard";
 import BackgroundSection from "@/components/template/BackgroundSection";
+import Link from "next/link";
 
 export default function Page() {
   const continueWatching = [
     {
+      url: "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714",
       image: "/img/jobs/job-5.webp",
     },
   ];
@@ -32,14 +34,14 @@ export default function Page() {
             </h2>
             <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
               {continueWatching.map((item, index) => (
-                <div key={`watch-${index}`}>
+                <Link key={`watch-${index}`} href={item.url}>
                   <VideoCard
                     key={index}
                     image={item.image}
                     bgColor="bg-blue/50"
                     withPlay
                   ></VideoCard>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

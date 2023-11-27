@@ -3,6 +3,9 @@
 import Logo from "../ui/Logo";
 import Link from "next/link";
 import { User2, Search } from "lucide-react";
+import DropdownMenu from "../ui/DropdownMenu";
+
+const userNavigation = [{ name: "Account", url: "/account" }];
 
 export default function Header() {
   return (
@@ -28,12 +31,16 @@ export default function Header() {
             <Search className="w-5 h-5 text-blue" />
           </div>
         </div>
-        <Link
+        {/* <Link
           href="/account"
           className="flex flex-1 items-center justify-end gap-x-6"
         >
           <User2 className="w-10 h-10 text-blue" />
-        </Link>
+        </Link> */}
+        <DropdownMenu
+          trigger={<User2 className="w-10 h-10 text-blue" />}
+          items={userNavigation}
+        />
       </nav>
     </header>
   );

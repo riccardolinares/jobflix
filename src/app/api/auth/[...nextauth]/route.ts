@@ -4,6 +4,8 @@ import prisma from "@/lib/prisma";
 import EmailProvider from "next-auth/providers/email";
 import { CustomsendVerificationRequest } from "@/lib/signinemail";
 import GoogleProvider from "next-auth/providers/google";
+import LinkedInProvider from "next-auth/providers/linkedin";
+
 // import client from "@sendgrid/client";
 
 // client.setApiKey(process.env.SENDGRID_API_KEY as string);
@@ -21,6 +23,23 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+      allowDangerousEmailAccountLinking: true,
+    }),
+    LinkedInProvider({
+      clientId: process.env.LINKEDIN_CLIENT_ID as string,
+      clientSecret: process.env.LINKEDIN_CLIENT_SECRET as string,
+      authorization: { params: { scope: "profile email openid" } },
+      issuer: "https://www.linkedin.com",
+      jwks_endpoint: "https://www.linkedin.com/oauth/openid/jwks",
+      async profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          firstname: profile.given_name,
+          lastname: profile.family_name,
+          email: profile.email,
+        };
+      },
       allowDangerousEmailAccountLinking: true,
     }),
     // ...add more providers here

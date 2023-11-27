@@ -39,8 +39,6 @@ export default async function VideoPage({ params }: VideoPageProps) {
 
   const video = await getVideo(params.id);
 
-  console.log("VIDEO", video);
-
   if (!video) {
     notFound();
   }
