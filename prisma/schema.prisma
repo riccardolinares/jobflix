@@ -61,6 +61,7 @@ model Video {
   slug            String
   title           String
   description     String
+  thumbnail       String?
   videoUrl        String
   headerVideoUrl  String?
   trailerVideoUrl String?

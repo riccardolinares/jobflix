@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
-    <div className="w-full min-h-screen relative isolate overflow-hidden pt-14 bg-gray">
+    <div className="w-full min-h-screen relative isolate overflow-hidden py-10 bg-gray">
       <img
         src="/img/backgrounds/bg-1.svg"
         alt=""

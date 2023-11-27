@@ -21,10 +21,10 @@ export default function Subscribe() {
           type="email"
           autoComplete="email"
           required
-          className="bg-neutral-300  min-w-0 flex-auto rounded-full border border-neutral-400/50 px-6 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-2 focus:ring-inset focus:ring-blue text-xl"
+          className="bg-gray-100 shadow-xl"
           placeholder="Inserisci la tua email"
         />
-        <Button type="submit" className="uppercase">
+        <Button type="submit" className="uppercase shadow-xl">
           Iscriviti
         </Button>
 
