@@ -13,7 +13,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     } else {
       params.delete("q");
     }
-    replace(`search?${params.toString()}`);
+    replace(`/search?${params.toString()}`);
   }, 300);
 
   return (

@@ -2,6 +2,7 @@
 import Table from "@/components/ui/search/table";
 import { Suspense } from "react";
 import { SearchTableSkeleton } from "@/components/ui/search/skeletons";
+import Container from "@/components/template/Container";
 
 export default async function Page({
   searchParams,
@@ -15,7 +16,7 @@ export default async function Page({
   const currentPage = Number(searchParams?.page) || 1;
 
   return (
-    <div className="flex flex-col justify-center items-center w-full">
+    <Container>
       {/* <div className="flex w-full items-center justify-between">
         <h1 className="text-2xl">Invoices</h1>
       </div> */}
@@ -28,6 +29,6 @@ export default async function Page({
       <div className="mt-5 flex w-full justify-center">
         {/* <Pagination totalPages={totalPages} /> */}
       </div>
-    </div>
+    </Container>
   );
 }
