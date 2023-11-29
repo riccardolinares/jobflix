@@ -1,12 +1,21 @@
+import cn from "classnames";
+
 export default function BackgroundSection({
   bg = "/img/backgrounds/bg-2.svg",
+  className,
   children,
 }: {
   bg?: string;
+  className?: string;
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full relative isolate overflow-hidden bg-gray">
+    <div
+      className={cn(
+        className,
+        "w-full relative isolate overflow-hidden bg-gray"
+      )}
+    >
       <img
         src={bg}
         alt=""

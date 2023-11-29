@@ -7,7 +7,7 @@ export default function Page() {
   const continueWatching = [
     {
       url: "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714",
-      image: "/img/jobs/job-18.webp",
+      image: "/img/jobs/filmmaker.png",
     },
   ];
 
@@ -93,68 +93,71 @@ export default function Page() {
   ];
 
   return (
-    <BackgroundSection bg="/img/backgrounds/bg-2.svg">
-      <Container>
-        <div className="flex flex-col gap-y-16">
-          <div>
-            <h1 className="sr-only">Dashboard</h1>
-            <h2 className="text-3xl text-blue font-bold">
-              Continua a guardare
-            </h2>
-            <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {continueWatching.map((item, index) => (
-                <Link key={`watch-${index}`} href={item.url}>
-                  <VideoCard
-                    key={index}
-                    image={item.image}
-                    bgColor="bg-blue/50"
-                    withPlay
-                  ></VideoCard>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="text-3xl text-blue font-bold">Novità</h2>
-            <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {other
-                .sort(() => 0.5 - Math.random())
-                .slice(0, 7)
-                .map((item, index) => (
-                  <div key={`watch-${index}`}>
-                    <VideoCard key={index} image={item.image}></VideoCard>
-                  </div>
-                ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="text-3xl text-blue font-bold">Più visti</h2>
-            <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {other
-                .sort(() => 0.5 - Math.random())
-                .slice(0, 7)
-                .map((item, index) => (
-                  <div key={`watch-${index}`}>
-                    <VideoCard key={index} image={item.image}></VideoCard>
-                  </div>
-                ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="text-3xl text-blue font-bold">Lavori creativi</h2>
-            <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
-              {other
-                .sort(() => 0.5 - Math.random())
-                .slice(0, 7)
-                .map((item, index) => (
-                  <div key={`watch-${index}`}>
-                    <VideoCard key={index} image={item.image}></VideoCard>
-                  </div>
-                ))}
-            </div>
+    <BackgroundSection bg="/img/backgrounds/bg-2.svg" className="p-8">
+      <div className="flex flex-col gap-y-16">
+        <div>
+          <h1 className="sr-only">Dashboard</h1>
+          <h2 className="text-3xl text-blue font-bold">Continua a guardare</h2>
+          <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
+            {continueWatching.map((item, index) => (
+              <Link key={`watch-${index}`} href={item.url}>
+                <VideoCard
+                  key={index}
+                  image={item.image}
+                  bgColor="bg-blue/50"
+                  withPlay
+                  className="bg-top"
+                ></VideoCard>
+              </Link>
+            ))}
           </div>
         </div>
-      </Container>
+        <div>
+          <h2 className="text-3xl text-blue font-bold">Novità</h2>
+          <div className="flex flex-row gap-x-4 items-center justify-start mt-5 overflow-x-scroll	">
+            <div>
+              <VideoCard image={"/img/jobs/filmmaker.png"}></VideoCard>
+            </div>
+            {other
+              .sort(() => 0.5 - Math.random())
+              .map((item, index) => (
+                <div key={`watch-${index}`}>
+                  <VideoCard key={index} image={item.image}></VideoCard>
+                </div>
+              ))}
+          </div>
+        </div>
+        <div>
+          <h2 className="text-3xl text-blue font-bold">Più visti</h2>
+          <div className="flex flex-row gap-x-4 items-center justify-start mt-5 overflow-x-scroll	">
+            <div>
+              <VideoCard image={"/img/jobs/filmmaker.png"}></VideoCard>
+            </div>
+            {other
+              .sort(() => 0.5 - Math.random())
+              .map((item, index) => (
+                <div key={`watch-${index}`}>
+                  <VideoCard key={index} image={item.image}></VideoCard>
+                </div>
+              ))}
+          </div>
+        </div>
+        <div>
+          <h2 className="text-3xl text-blue font-bold">Lavori creativi</h2>
+          <div className="flex flex-row gap-x-4 items-center justify-start mt-5 overflow-x-scroll	">
+            <div>
+              <VideoCard image={"/img/jobs/filmmaker.png"}></VideoCard>
+            </div>
+            {other
+              .sort(() => 0.5 - Math.random())
+              .map((item, index) => (
+                <div key={`watch-${index}`}>
+                  <VideoCard key={index} image={item.image}></VideoCard>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
     </BackgroundSection>
   );
 }
