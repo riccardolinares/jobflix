@@ -2,13 +2,11 @@
 import Slider from "../ui/Slider";
 import Image from "next/image";
 const items = [
-  "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg",
-  "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
-  "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
-  "https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg",
-  "https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg",
-  "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
-  "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
+  "/img/sponsors/8.png",
+  "/img/sponsors/9.png",
+  "/img/sponsors/10.png",
+  "/img/sponsors/12.png",
+  "/img/sponsors/apple.png",
 ];
 
 export default function LogoCloud() {
