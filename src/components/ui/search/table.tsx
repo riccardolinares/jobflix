@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
 import Card from "@/components/ui/Card";
 import { Video } from "@prisma/client";
+import Link from "next/link";
 
 export default async function SearchTable({
   query,
@@ -10,37 +11,75 @@ export default async function SearchTable({
   currentPage: number;
 }) {
   console.log(query, currentPage);
-  const videos = await prisma.video.findMany({
-    where: {
-      OR: [
-        {
-          title: {
-            contains: query,
-            mode: "insensitive",
-          },
-        },
-        {
-          description: {
-            contains: query,
-            mode: "insensitive",
-          },
-        },
-        // {
-        //   tags: {
-        //     has: query,
-        // mode: 'insensitive'
-        //   },
-        // },
-      ],
-    },
-    skip: (currentPage - 1) * 10,
-    take: 10,
-  });
+  // const videos = await prisma.video.findMany({
+  //   where: {
+  //     OR: [
+  //       {
+  //         title: {
+  //           contains: query,
+  //           mode: "insensitive",
+  //         },
+  //       },
+  //       {
+  //         description: {
+  //           contains: query,
+  //           mode: "insensitive",
+  //         },
+  //       },
+  //       // {
+  //       //   tags: {
+  //       //     has: query,
+  //       // mode: 'insensitive'
+  //       //   },
+  //       // },
+  //     ],
+  //   },
+  //   skip: (currentPage - 1) * 10,
+  //   take: 10,
+  // });
+
+  const videos = await prisma.video.findMany();
+
+  const dummyVideo = [] as Video[];
+
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-1.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-2.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-3.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-4.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-5.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-6.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-7.webp",
+  } as Video);
+  dummyVideo.push({
+    thumbnail: "/img/jobs/job-8.webp",
+  } as Video);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
       {videos.map((video: Video, index: number) => (
-        <div key={`video-${index}`} className="">
+        <Link
+          key={`video-${index}`}
+          href={`/video/${video.id}` || "#"}
+          className=""
+        >
+          <Card video={video} />
+        </Link>
+      ))}
+      {dummyVideo.map((video: Video, index: number) => (
+        <div key={`video-${index}`} className="cursor-not-allowed">
           <Card video={video} />
         </div>
       ))}

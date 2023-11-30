@@ -18,7 +18,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center">
         <Hero />
         <LogoCloud />
-        <div className="w-full min-h-screen relative isolate overflow-hidden pt-14 bg-gray">
+        <div className="w-full relative isolate overflow-hidden bg-gray">
           <img
             src="/img/backgrounds/bg-2.svg"
             alt=""

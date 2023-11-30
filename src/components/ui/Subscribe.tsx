@@ -1,10 +1,25 @@
+"use client";
+
 import Button from "./Button";
 import Image from "next/image";
 import { Input } from "./Input";
+import { signIn } from "next-auth/react";
+import { useState } from "react";
 
 export default function Subscribe() {
+  const [email, setEmail] = useState("");
+
   return (
-    <form className="group relative w-full">
+    <form
+      className="group relative w-full"
+      onSubmit={(e) => {
+        e.preventDefault();
+        signIn("email", {
+          email: email,
+          callbackUrl: "/dashboard",
+        });
+      }}
+    >
       <img
         src="/img/highlight-circle.svg"
         alt=""
@@ -23,6 +38,8 @@ export default function Subscribe() {
           required
           className="bg-gray-100 shadow-xl"
           placeholder="Inserisci la tua email"
+          value={email}
+          onChange={(e: any) => setEmail(e.target.value)}
         />
         <Button type="submit" className="uppercase shadow-xl">
           Iscriviti

@@ -24,12 +24,12 @@ export function Slider({ items }: { items: React.ReactNode[] }) {
         // when window width is >= 640px
         640: {
           width: 640,
-          slidesPerView: 1,
+          slidesPerView: 3,
         },
         // when window width is >= 768px
         768: {
           width: 768,
-          slidesPerView: 2,
+          slidesPerView: 5,
         },
       }}
     >

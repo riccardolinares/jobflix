@@ -28,7 +28,7 @@ export default function SigninForm() {
             </label>
             <Input
               type="email"
-              className="w-full px-3 py-3 text-base text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue focus:border-blue"
+              className="w-full px-3 py-3 text-base text-gray-500 placeholder:text-gray-500 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50 focus:ring-blue focus:border-blue"
               placeholder="Il tuo indirizzo email"
               name="email"
               id="email"

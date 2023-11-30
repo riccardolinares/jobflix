@@ -1,21 +1,44 @@
 /* eslint-disable @next/next/no-img-element */
 import Subscribe from "@/components/ui/Subscribe";
-import HorizontalScrollCarousel from "@/components/ui/HorizontalScrollCarousel";
 import { TypeAnimation } from "react-type-animation";
+import { Video } from "@prisma/client";
+import Card from "@/components/ui/Card";
+import cn from "classnames";
+
+const images = [
+  { thumbnail: "/img/jobs/job-1.webp" },
+  { thumbnail: "/img/jobs/job-2.webp" },
+  { thumbnail: "/img/jobs/job-3.webp" },
+  { thumbnail: "/img/jobs/job-4.webp" },
+  { thumbnail: "/img/jobs/job-5.webp" },
+  { thumbnail: "/img/jobs/job-6.webp" },
+] as Video[];
 
 export default function Hero() {
   return (
-    <div className="w-full min-h-screen relative isolate overflow-hidden py-10 bg-gray">
+    <div className="w-full relative isolate overflow-hidden py-16 bg-gray">
       <img
         src="/img/backgrounds/bg-1.svg"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
 
-      <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto">
-        <HorizontalScrollCarousel />
+      <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto gap-x-4">
+        {images.map((image, index) => {
+          return (
+            <div
+              key={`person-${index}`}
+              className={cn(
+                index == 0 ? "-ml-12" : "",
+                index == images.length - 1 ? "-mr-12" : ""
+              )}
+            >
+              <Card video={image}></Card>
+            </div>
+          );
+        })}
       </div>
-      <div className="mx-auto  mt-16 px-6 text-center">
+      <div className="mx-auto mt-16 px-6 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-black uppercase">
           Diventa <br />
           <span className="text-blue-medium">

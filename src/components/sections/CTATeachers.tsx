@@ -4,9 +4,9 @@ import Button from "../ui/Button";
 
 export default function CTA() {
   return (
-    <div className="w-full min-h-screen py-16">
+    <div className="w-full py-16">
       <div className="group mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-        <div className="mx-auto mt-8 flex max-w-2xl sm:mt-24 lg:mr-10 lg:ml-0 lg:mt-0 lg:max-w-none lg:flex-none xl:mr-32">
+        <div className="mx-auto mt-8 flex max-w-2xl lg:mr-10 lg:ml-0 lg:max-w-none lg:flex-none xl:mr-32">
           <Image
             src="/img/cta-teacher.webp"
             alt=""
@@ -22,7 +22,7 @@ export default function CTA() {
             className="group-hover:block hidden object-contain"
           />
         </div>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <span className="flex flex-row items-center gap-x-4 text-xl">
               <Image
@@ -49,7 +49,7 @@ export default function CTA() {
             dei lavori visti.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <Link href="#">
+            <Link href="/auth/signin">
               <Button>Scopri il lavoro dei tuoi sogni</Button>
             </Link>
           </div>

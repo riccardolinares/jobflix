@@ -7,6 +7,8 @@ const items = [
   "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
   "https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg",
   "https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg",
+  "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
+  "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
 ];
 
 export default function LogoCloud() {
@@ -25,7 +27,7 @@ export default function LogoCloud() {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 bg-white py-6">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 bg-white py-20">
         <h2 className="text-center text-4xl font-extrabold leading-8 text-blue">
           I nostri sostentitori
         </h2>

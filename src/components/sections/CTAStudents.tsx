@@ -4,9 +4,9 @@ import Button from "../ui/Button";
 
 export default function CTA() {
   return (
-    <div className="w-full min-h-screen items-center flex py-16">
+    <div className="w-full items-center flex py-16">
       <div className="group mx-auto max-w-7xl px-6 flex lg:flex-row flex-col-reverse lg:px-8 ">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <span className="flex flex-row items-center gap-x-4 text-xl">
               <Image
@@ -33,12 +33,12 @@ export default function CTA() {
             strada perfetta per te.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <Link href="#">
+            <Link href="/auth/signin">
               <Button>Scopri il lavoro dei tuoi sogni</Button>
             </Link>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div className="mx-auto flex max-w-2xl lg:ml-10 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
           <Image
             src="/img/cta-student.webp"
             alt=""

@@ -25,11 +25,18 @@ export default function Speakers({
               height={48}
             />
             <div className="min-w-0 flex-auto">
-              <p className="text-lg font-semibold leading-6 text-gray-900">
+              <p className="text-lg font-semibold leading-6 text-gray-900 flex flex-row gap-x-4">
                 {speaker.name}
+                <span className="mt-1 truncate font-normal text-base leading-5 text-gray-500">
+                  |
+                </span>
+                <span className="mt-1 truncate font-normal text-base leading-5 text-gray-500">
+                  {speaker.jobTitle}
+                </span>
               </p>
-              <p className="mt-1 truncate text-base leading-5 text-gray-500">
-                {speaker.jobTitle}
+
+              <p className="mt-1 text-base leading-5 text-gray-500">
+                {speaker.bio}
               </p>
             </div>
           </div>

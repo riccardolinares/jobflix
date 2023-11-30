@@ -82,11 +82,12 @@ model Category {
 }
 
 model Sponsor {
-  id      String  @id @default(cuid())
-  name    String
-  logo    String?
-  website String?
-  videos  Video[]
+  id          String  @id @default(cuid())
+  name        String
+  logo        String?
+  website     String?
+  description String?
+  videos      Video[]
 }
 
 model Speaker {

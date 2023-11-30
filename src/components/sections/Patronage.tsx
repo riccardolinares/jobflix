@@ -50,7 +50,7 @@ export default function Patronage() {
               return (
                 <div className="" key={`patronage-${i}`}>
                   <Image
-                    className="max-h-28 w-full object-contain"
+                    className="h-full w-full object-contain"
                     src={patronage.url}
                     alt={patronage.alt}
                     width={800}
@@ -65,7 +65,7 @@ export default function Patronage() {
             return (
               <div className="p-4" key={`patronage-${i}`}>
                 <Image
-                  className="max-h-20 w-full object-contain"
+                  className="h-full w-full object-contain"
                   src={patronage.url}
                   alt={patronage.alt}
                   width={800}
