@@ -1,38 +1,24 @@
 "use client";
 
-import Header from "@/components/template/Header";
-import Hero from "@/components/sections/Hero";
-import LogoCloud from "@/components/sections/LogoCloud";
-import CTAStudents from "@/components/sections/CTAStudents";
-import CTATeachers from "@/components/sections/CTATeachers";
-import CTAChanges from "@/components/sections/CTAChanges";
-import Patronage from "@/components/sections/Patronage";
-import CTAQuestions from "@/components/sections/CTAQuestions";
-import FAQ from "@/components/sections/FAQ";
-import Footer from "@/components/template/Footer";
+import Logo from "@/components/ui/Logo";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="flex min-h-screen flex-col items-center">
-        <Hero />
-        <LogoCloud />
-        <div className="w-full relative isolate overflow-hidden bg-gray">
-          <img
-            src="/img/backgrounds/bg-2.svg"
-            alt=""
-            className="absolute translate translate-y-1/2 inset-0 -z-10 w-full object-cover"
-          />
-          <CTAStudents />
-          <CTATeachers />
-        </div>
-        <CTAChanges />
-        <Patronage />
-        <CTAQuestions />
-        <FAQ />
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gray pb-16 bg-[url('/img/backgrounds/bg-1.svg')] bg-cover bg-center">
+        <Logo className="w-72" />
+        <h1 className="text-5xl text-blue font-bold mt-10">Coming Soon</h1>
+        <p className="text-2xl mt-4">
+          Per info contattare{" "}
+          <Link
+            className="underline font-semibold"
+            href="mailto:info@jobflix.it"
+          >
+            info@jobflix.it
+          </Link>
+        </p>
       </main>
-      <Footer />
     </>
   );
 }
