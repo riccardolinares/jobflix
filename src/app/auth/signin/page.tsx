@@ -14,7 +14,7 @@ export default async function Page() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-gray py-10">
+    <div className="w-full min-h-screen bg-gray py-10 bg-[url('/img/backgrounds/bg-1.svg')] bg-cover bg-center">
       <div className="flex min-h-full flex-col justify-start sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <Logo className="h-16 w-auto mx-auto" />
