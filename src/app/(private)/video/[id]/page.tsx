@@ -3,11 +3,12 @@ import { notFound, redirect } from "next/navigation";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getVideo } from "@/app/actions";
-import { Play, Video, Heart, Share2 } from "lucide-react";
+import { Play, Video, Heart } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
 import Speakers from "@/components/ui/Speakers";
+// import ShareBtn from "@/components/ui/ShareBtn";
 
 export interface VideoPageProps {
   params: {
@@ -84,19 +85,16 @@ export default async function VideoPage({ params }: VideoPageProps) {
                   </Link>
                   <div className="flex flex-row gap-x-6 pl-8 items-center justify-center text-blue">
                     <Link href="#trailer">
-                      <button className="group flex flex-col justify-center items-center hover:text-blue-light">
-                        <Video className="group-hover:fill-blue-light" />
+                      <button className="group flex flex-col justify-center items-center hover:text-blue">
+                        <Video className="group-hover:fill-blue" />
                         <span className="text-sm">Trailer</span>
                       </button>
                     </Link>
-                    <button className="group flex flex-col justify-center items-center hover:text-blue-light">
-                      <Heart className="group-hover:fill-blue-light" />
+                    <button className="group flex flex-col justify-center items-center hover:text-blue">
+                      <Heart className="group-hover:fill-blue" />
                       <span className="text-sm">Like</span>
                     </button>
-                    <button className="group flex flex-col justify-center items-center hover:text-blue-light">
-                      <Share2 className="group-hover:fill-blue-light" />
-                      <span className="text-sm">Share</span>
-                    </button>
+                    {/* <ShareBtn /> */}
                   </div>
                 </div>
               </div>

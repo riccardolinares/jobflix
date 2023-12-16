@@ -2,6 +2,7 @@ import prisma from "@/lib/prisma";
 import Card from "@/components/ui/Card";
 import { Video } from "@prisma/client";
 import Link from "next/link";
+import { SearchTableSkeleton } from "./skeletons";
 
 export default async function SearchTable({
   query,
@@ -63,9 +64,6 @@ export default async function SearchTable({
   dummyVideo.push({
     thumbnail: "/img/jobs/job-7.webp",
   } as Video);
-  dummyVideo.push({
-    thumbnail: "/img/jobs/job-8.webp",
-  } as Video);
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
@@ -79,9 +77,13 @@ export default async function SearchTable({
         </Link>
       ))}
       {dummyVideo.map((video: Video, index: number) => (
-        <div key={`video-${index}`} className="cursor-not-allowed">
+        <Link
+          key={`video-${index}`}
+          href={`/video/5dcbcdd68b8f22fbfe0d54c6b21ab714`}
+          className=""
+        >
           <Card video={video} />
-        </div>
+        </Link>
       ))}
     </div>
   );

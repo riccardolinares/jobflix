@@ -1,18 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 import Subscribe from "@/components/ui/Subscribe";
 import { TypeAnimation } from "react-type-animation";
-import { Video } from "@prisma/client";
-import Card from "@/components/ui/Card";
-import cn from "classnames";
+import Carousel from "../ui/carousel/CarouselAutoplay";
+import { EmblaOptionsType } from "embla-carousel-react";
 
 const images = [
-  { thumbnail: "/img/jobs/job-1.webp" },
-  { thumbnail: "/img/jobs/job-2.webp" },
-  { thumbnail: "/img/jobs/job-3.webp" },
-  { thumbnail: "/img/jobs/job-4.webp" },
-  { thumbnail: "/img/jobs/job-5.webp" },
-  { thumbnail: "/img/jobs/job-6.webp" },
-] as Video[];
+  { image: "/img/jobs/job-1.webp" },
+  { image: "/img/jobs/job-2.webp" },
+  { image: "/img/jobs/job-3.webp" },
+  { image: "/img/jobs/job-4.webp" },
+  { image: "/img/jobs/job-5.webp" },
+  { image: "/img/jobs/job-6.webp" },
+  { image: "/img/jobs/job-8.webp" },
+  { image: "/img/jobs/job-9.webp" },
+  { image: "/img/jobs/job-10.webp" },
+  { image: "/img/jobs/job-11.webp" },
+  { image: "/img/jobs/job-12.webp" },
+  { image: "/img/jobs/job-13.webp" },
+] as any[];
+
+const OPTIONS: EmblaOptionsType = {
+  align: "center",
+  slidesToScroll: "auto",
+  containScroll: "trimSnaps",
+  loop: true,
+  delay: 1000,
+  stopOnFocusIn: false,
+};
 
 export default function Hero() {
   return (
@@ -24,19 +38,7 @@ export default function Hero() {
       />
 
       <div className="w-full flex items-center justify-center mt-2 max-w-7xl mx-auto gap-x-4">
-        {images.map((image, index) => {
-          return (
-            <div
-              key={`person-${index}`}
-              className={cn(
-                index == 0 ? "-ml-12" : "",
-                index == images.length - 1 ? "-mr-12" : ""
-              )}
-            >
-              <Card video={image}></Card>
-            </div>
-          );
-        })}
+        <Carousel slides={images} options={OPTIONS} />
       </div>
       <div className="mx-auto mt-16 px-6 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-black uppercase">

@@ -2,6 +2,8 @@ import Container from "@/components/template/Container";
 import VideoCard from "../../../components/ui/VideoCard";
 import BackgroundSection from "@/components/template/BackgroundSection";
 import Link from "next/link";
+import Carousel from "@/components/ui/carousel/Carousel";
+import { EmblaOptionsType } from "embla-carousel-react";
 
 export default function Page() {
   const continueWatching = [
@@ -12,6 +14,8 @@ export default function Page() {
   ];
 
   const other = [
+    { image: "/img/jobs/filmmaker.png" },
+
     {
       image: "/img/jobs/job-1.webp",
     },
@@ -92,15 +96,35 @@ export default function Page() {
     },
   ];
 
+  const OPTIONS: EmblaOptionsType = {
+    align: "center",
+    slidesToScroll: "auto",
+    containScroll: "trimSnaps",
+  };
+
+  const SLIDES = [
+    { image: "/img/jobs/filmmaker.png" },
+    { image: "/img/jobs/job-1.webp" },
+    { image: "/img/jobs/job-2.webp" },
+    { image: "/img/jobs/job-3.webp" },
+    { image: "/img/jobs/job-4.webp" },
+    { image: "/img/jobs/job-5.webp" },
+    { image: "/img/jobs/job-6.webp" },
+    { image: "/img/jobs/job-8.webp" },
+  ];
+
   return (
-    <BackgroundSection bg="/img/backgrounds/bg-2.svg" className="p-8">
+    <BackgroundSection bg="/img/backgrounds/bg-2.svg">
       <div className="flex flex-col gap-y-16">
-        <div>
+        <div className="p-8">
           <h1 className="sr-only">Dashboard</h1>
           <h2 className="text-3xl text-blue font-bold">Continua a guardare</h2>
           <div className="flex flex-row gap-x-4 items-center justify-start mt-5">
             {continueWatching.map((item, index) => (
-              <Link key={`watch-${index}`} href={item.url}>
+              <Link
+                key={`watch-${index}`}
+                href={item.url || "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714"}
+              >
                 <VideoCard
                   key={index}
                   image={item.image}
@@ -113,48 +137,22 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h2 className="text-3xl text-blue font-bold">Novità</h2>
-          <div className="flex flex-row gap-x-4 items-center justify-start mt-5 overflow-x-scroll	">
-            <div>
-              <VideoCard image={"/img/jobs/filmmaker.png"}></VideoCard>
-            </div>
-            {other
-              .sort(() => 0.5 - Math.random())
-              .map((item, index) => (
-                <div key={`watch-${index}`}>
-                  <VideoCard key={index} image={item.image}></VideoCard>
-                </div>
-              ))}
+          <h2 className="text-3xl text-blue font-bold px-8">Novità</h2>
+          <div className="items-center w-full mt-5">
+            <Carousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
         <div>
-          <h2 className="text-3xl text-blue font-bold">Più visti</h2>
-          <div className="flex flex-row gap-x-4 items-center justify-start mt-5 overflow-x-scroll	">
-            <div>
-              <VideoCard image={"/img/jobs/filmmaker.png"}></VideoCard>
-            </div>
-            {other
-              .sort(() => 0.5 - Math.random())
-              .map((item, index) => (
-                <div key={`watch-${index}`}>
-                  <VideoCard key={index} image={item.image}></VideoCard>
-                </div>
-              ))}
+          <h2 className="text-3xl text-blue font-bold px-8">Più visti</h2>
+          <div className="items-center w-full mt-5">
+            <Carousel slides={other} options={OPTIONS} />
           </div>
         </div>
+
         <div>
-          <h2 className="text-3xl text-blue font-bold">Lavori creativi</h2>
-          <div className="flex flex-row gap-x-4 items-center justify-start mt-5 overflow-x-scroll	">
-            <div>
-              <VideoCard image={"/img/jobs/filmmaker.png"}></VideoCard>
-            </div>
-            {other
-              .sort(() => 0.5 - Math.random())
-              .map((item, index) => (
-                <div key={`watch-${index}`}>
-                  <VideoCard key={index} image={item.image}></VideoCard>
-                </div>
-              ))}
+          <h2 className="text-3xl text-blue font-bold px-8">Lavori creativi</h2>
+          <div className="items-center w-full mt-5">
+            <Carousel slides={other} options={OPTIONS} />
           </div>
         </div>
       </div>

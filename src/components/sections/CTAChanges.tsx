@@ -36,7 +36,14 @@ export default function CTA() {
             alt=""
             width={640}
             height={383}
-            className="h-full w-full object-contain"
+            className="group-hover:hidden object-contain"
+          />
+          <Image
+            src="/img/cta-changes.webp"
+            alt=""
+            width={640}
+            height={383}
+            className="group-hover:block hidden object-contain"
           />
         </div>
       </div>
