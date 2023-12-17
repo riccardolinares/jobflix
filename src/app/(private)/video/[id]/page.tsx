@@ -57,10 +57,8 @@ export default async function VideoPage({ params }: VideoPageProps) {
               autoPlay
               className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
             >
-              <source
-                src="https://customer-gkb1uqp060etkynv.cloudflarestream.com/5dcbcdd68b8f22fbfe0d54c6b21ab714/downloads/default.mp4"
-                type="video/mp4"
-              />
+              {/* TODO: handle the default video header */}
+              <source src={video.headerVideoUrl || ""} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

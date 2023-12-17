@@ -21,7 +21,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <Link
               className="embla__slide"
               key={index}
-              href={slide.url || "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714"}
+              href={slide.url || "/video/3e94aaa80c6009ee0452229ffa45ba6d"}
             >
               <img
                 className="embla__slide__img"

@@ -79,17 +79,18 @@ const EmblaCarousel: React.FC<CarouselPropType> = (props) => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
     setPrevBtnDisabled(!emblaApi.canScrollPrev());
     setNextBtnDisabled(!emblaApi.canScrollNext());
-  }, []);
+  }, [emblaApi, setPrevBtnDisabled, setNextBtnDisabled]);
 
   useEffect(() => {
     if (!emblaApi) return;
 
-    onSelect(emblaApi);
-    emblaApi.on("reInit", onSelect);
-    emblaApi.on("select", onSelect);
+    onSelect();
+    // emblaApi.on("reInit", onSelect);
+    // emblaApi.on("select", onSelect);
   }, [emblaApi, onSelect]);
 
   return (
@@ -102,7 +103,7 @@ const EmblaCarousel: React.FC<CarouselPropType> = (props) => {
               <Link
                 className="embla__slide"
                 key={index}
-                href={slide.url || "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714"}
+                href={slide.url || "/video/3e94aaa80c6009ee0452229ffa45ba6d"}
               >
                 <img
                   className="embla__slide__img"

@@ -8,7 +8,7 @@ import { EmblaOptionsType } from "embla-carousel-react";
 export default function Page() {
   const continueWatching = [
     {
-      url: "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714",
+      url: "/video/3e94aaa80c6009ee0452229ffa45ba6d",
       image: "/img/jobs/filmmaker.png",
     },
   ];
@@ -123,7 +123,7 @@ export default function Page() {
             {continueWatching.map((item, index) => (
               <Link
                 key={`watch-${index}`}
-                href={item.url || "/video/5dcbcdd68b8f22fbfe0d54c6b21ab714"}
+                href={item.url || "/video/3e94aaa80c6009ee0452229ffa45ba6d"}
               >
                 <VideoCard
                   key={index}
