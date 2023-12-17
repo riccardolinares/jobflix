@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Subscribe from "@/components/ui/Subscribe";
 import { TypeAnimation } from "react-type-animation";
 import Carousel from "../ui/carousel/CarouselAutoplay";
 import { EmblaOptionsType } from "embla-carousel-react";
@@ -65,18 +64,7 @@ export default function Hero() {
           <br />
           che c&apos;è in te
         </h1>
-        <div className="max-w-2xl items-center mx-auto">
-          <p className="mt-6 sm:text-xl text-lg font-normal leading-8  text-blue">
-            Jobflix è la bussola per orientarti al lavoro: scopri i mestieri,
-            valuta le tue attitudini e pianifica il percorso di studi che ti
-            guiderà alla professioen che davvero fa per te!
-          </p>
-          <div className="flex items-center justify-center">
-            <div className="max-w-xl w-full mt-10">
-              <Subscribe />
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
