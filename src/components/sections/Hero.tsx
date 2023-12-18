@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Subscribe from "@/components/ui/Subscribe";
 import { TypeAnimation } from "react-type-animation";
-import Carousel from "../ui/carousel/CarouselAutoplay";
-import Image from "next/image";
+
 import Card from "../ui/VideoCard";
 import cn from "classnames";
 import { Video } from "@prisma/client";
