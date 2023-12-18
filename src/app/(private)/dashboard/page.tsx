@@ -111,6 +111,42 @@ export default function Page() {
     { image: "/img/jobs/job-5.webp" },
     { image: "/img/jobs/job-6.webp" },
     { image: "/img/jobs/job-8.webp" },
+    { image: "/img/jobs/job-2.webp" },
+    { image: "/img/jobs/job-11.webp" },
+    { image: "/img/jobs/job-23.webp" },
+    { image: "/img/jobs/job-16.webp" },
+  ];
+
+  const SLIDESVisti: { image: string; alt?: string; url?: string }[] = [
+    { image: "/img/jobs/filmmaker.png" },
+    { image: "/img/jobs/job-17.webp" },
+    { image: "/img/jobs/job-9.webp" },
+    { image: "/img/jobs/job-25.webp" },
+    { image: "/img/jobs/job-14.webp" },
+    { image: "/img/jobs/job-5.webp" },
+    { image: "/img/jobs/job-12.webp" },
+    { image: "/img/jobs/job-21.webp" },
+    { image: "/img/jobs/job-7.webp" },
+    { image: "/img/jobs/job-19.webp" },
+    { image: "/img/jobs/job-8.webp" },
+    { image: "/img/jobs/job-9.webp" },
+    { image: "/img/jobs/job-10.webp" },
+    { image: "/img/jobs/job-11.webp" },
+  ];
+
+  const SLIDESCreativi: { image: string; alt?: string; url?: string }[] = [
+    { image: "/img/jobs/filmmaker.png" },
+    { image: "/img/jobs/job-15.webp" },
+    { image: "/img/jobs/job-16.webp" },
+    { image: "/img/jobs/job-17.webp" },
+    { image: "/img/jobs/job-18.webp" },
+    { image: "/img/jobs/job-19.webp" },
+    { image: "/img/jobs/job-20.webp" },
+    { image: "/img/jobs/job-21.webp" },
+    { image: "/img/jobs/job-22.webp" },
+    { image: "/img/jobs/job-23.webp" },
+    { image: "/img/jobs/job-24.webp" },
+    { image: "/img/jobs/job-24.webp" },
   ];
 
   return (
@@ -174,7 +210,7 @@ export default function Page() {
               slidesToScroll="auto"
               containScroll="trimSnaps"
             >
-              {SLIDES.map((slide, index) => {
+              {SLIDESVisti.map((slide, index) => {
                 return (
                   <Link
                     className="relative flex-[0_0_256px] aspect-[9/16] w-52 m-2"
@@ -205,7 +241,7 @@ export default function Page() {
               slidesToScroll="auto"
               containScroll="trimSnaps"
             >
-              {SLIDES.map((slide, index) => {
+              {SLIDESCreativi.map((slide, index) => {
                 return (
                   <Link
                     className="relative flex-[0_0_256px] aspect-[9/16] w-52 m-2"

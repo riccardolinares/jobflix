@@ -12,8 +12,8 @@ type Props = PropsWithChildren & EmblaOptionsType;
 const Carousel = ({ children, ...options }: Props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  const canScrollNext = !!emblaApi?.canScrollNext();
-  const canScrollPrev = !!emblaApi?.canScrollPrev();
+  const canScrollNext = true; //!!emblaApi?.canScrollNext();
+  const canScrollPrev = true; //!!emblaApi?.canScrollPrev();
 
   return (
     <div className="flex justify-between items-center">
