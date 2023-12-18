@@ -4,6 +4,7 @@ import BackgroundSection from "@/components/template/BackgroundSection";
 import Link from "next/link";
 import Carousel from "@/components/ui/carousel/Carousel";
 import { EmblaOptionsType } from "embla-carousel-react";
+import Image from "next/image";
 
 export default function Page() {
   const continueWatching = [
@@ -15,7 +16,6 @@ export default function Page() {
 
   const other = [
     { image: "/img/jobs/filmmaker.png" },
-
     {
       image: "/img/jobs/job-1.webp",
     },
@@ -102,7 +102,7 @@ export default function Page() {
     containScroll: "trimSnaps",
   };
 
-  const SLIDES = [
+  const SLIDES: { image: string; alt?: string; url?: string }[] = [
     { image: "/img/jobs/filmmaker.png" },
     { image: "/img/jobs/job-1.webp" },
     { image: "/img/jobs/job-2.webp" },
@@ -139,20 +139,92 @@ export default function Page() {
         <div>
           <h2 className="text-3xl text-blue font-bold px-8">Novità</h2>
           <div className="items-center w-full mt-5">
-            <Carousel slides={SLIDES} options={OPTIONS} />
+            <Carousel
+              align="center"
+              slidesToScroll="auto"
+              containScroll="trimSnaps"
+            >
+              {SLIDES.map((slide, index) => {
+                return (
+                  <Link
+                    className="relative flex-[0_0_256px] aspect-[9/16] w-52 m-2"
+                    key={index}
+                    href={
+                      slide.url || "/video/3e94aaa80c6009ee0452229ffa45ba6d"
+                    }
+                  >
+                    {/* use object-cover + fill since we don't know the height and width of the parent */}
+                    <Image
+                      src={slide.image}
+                      fill
+                      className="object-cover sm:rounded-2xl sm:shadow-xl rounded-lg shadow-lg"
+                      alt={slide.alt || ""}
+                    />
+                  </Link>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
         <div>
           <h2 className="text-3xl text-blue font-bold px-8">Più visti</h2>
           <div className="items-center w-full mt-5">
-            <Carousel slides={other} options={OPTIONS} />
+            <Carousel
+              align="center"
+              slidesToScroll="auto"
+              containScroll="trimSnaps"
+            >
+              {SLIDES.map((slide, index) => {
+                return (
+                  <Link
+                    className="relative flex-[0_0_256px] aspect-[9/16] w-52 m-2"
+                    key={index}
+                    href={
+                      slide.url || "/video/3e94aaa80c6009ee0452229ffa45ba6d"
+                    }
+                  >
+                    {/* use object-cover + fill since we don't know the height and width of the parent */}
+                    <Image
+                      src={slide.image}
+                      fill
+                      className="object-cover sm:rounded-2xl sm:shadow-xl rounded-lg shadow-lg"
+                      alt={slide.alt || ""}
+                    />
+                  </Link>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
 
         <div>
           <h2 className="text-3xl text-blue font-bold px-8">Lavori creativi</h2>
           <div className="items-center w-full mt-5">
-            <Carousel slides={other} options={OPTIONS} />
+            <Carousel
+              align="center"
+              slidesToScroll="auto"
+              containScroll="trimSnaps"
+            >
+              {SLIDES.map((slide, index) => {
+                return (
+                  <Link
+                    className="relative flex-[0_0_256px] aspect-[9/16] w-52 m-2"
+                    key={index}
+                    href={
+                      slide.url || "/video/3e94aaa80c6009ee0452229ffa45ba6d"
+                    }
+                  >
+                    {/* use object-cover + fill since we don't know the height and width of the parent */}
+                    <Image
+                      src={slide.image}
+                      fill
+                      className="object-cover sm:rounded-2xl sm:shadow-xl rounded-lg shadow-lg"
+                      alt={slide.alt || ""}
+                    />
+                  </Link>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
       </div>

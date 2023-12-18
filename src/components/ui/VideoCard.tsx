@@ -26,7 +26,7 @@ export default function Card({
         src={image}
         alt=""
         layout="fill"
-        objectFit="cover"
+        style={{ objectFit: "cover" }}
         className="pointer-events-none "
       />
       {withPlay && (

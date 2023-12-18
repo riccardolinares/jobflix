@@ -146,7 +146,7 @@ export default async function VideoPage({ params }: VideoPageProps) {
                           src={sponsor.logo || "/img/placeholder.png"}
                           alt={sponsor.name}
                           layout="fill"
-                          objectFit="contain"
+                          style={{ objectFit: "contain" }}
                         />
                       </Link>
                     ))}
