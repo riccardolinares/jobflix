@@ -2,7 +2,6 @@
 
 import Header from "@/components/template/Header";
 import Hero from "@/components/sections/Hero";
-import LogoCloud from "@/components/sections/LogoCloud";
 import CTAStudents from "@/components/sections/CTAStudents";
 import CTATeachers from "@/components/sections/CTATeachers";
 import CTAChanges from "@/components/sections/CTAChanges";
@@ -17,7 +16,6 @@ export default function Home() {
       <Header />
       <main className="flex min-h-screen flex-col items-center">
         <Hero />
-        {/* <LogoCloud /> */}
         <div className="w-full relative isolate overflow-hidden bg-gray">
           <img
             src="/img/backgrounds/bg-2.svg"
